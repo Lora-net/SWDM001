@@ -1,0 +1,5 @@
+<map id="sx126x_driver/src/sx126x_hal.h" name="sx126x_driver/src/sx126x_hal.h">
+<area shape="rect" id="node1" title="Hardware Abstraction Layer for SX126x." alt="" coords="119,5,307,47"/>
+<area shape="rect" id="node2" href="$sx126x_8c.html" title="SX126x radio driver implementation." alt="" coords="5,102,204,129"/>
+<area shape="rect" id="node3" href="$sx126x__lr__fhss_8c.html" title="SX126x LR&#45;FHSS driver implementation." alt="" coords="228,95,416,136"/>
+</map>

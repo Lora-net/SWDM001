@@ -1,0 +1,121 @@
+/**
+ * \file
+ *
+ * \brief Rtx5-specific implementation of a synchronous transceiver event handler
+ */
+
+/**
+ * \file
+ *
+ * The Clear BSD License
+ * Copyright Semtech Corporation 2022. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted (subject to the limitations in the disclaimer
+ * below) provided that the following conditions are met:
+ *     * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above copyright
+ *       notice, this list of conditions and the following disclaimer in the
+ *       documentation and/or other materials provided with the distribution.
+ *     * Neither the name of the Semtech corporation nor the
+ *       names of its contributors may be used to endorse or promote products
+ *       derived from this software without specific prior written permission.
+ *
+ * NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY
+ * THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT
+ * NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+ * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL SEMTECH CORPORATION BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/*
+ * -----------------------------------------------------------------------------
+ * --- DEPENDENCIES ------------------------------------------------------------
+ */
+
+#include <sxlib/Radio/event_handler/Rtos_model_event_handler.h>
+#include <sxlib/Timing/SystemTime/Generic_SystemTime.h>
+
+#include "RTE_Components.h"
+#include CMSIS_device_header
+#include "cmsis_os2.h"
+#include <rtx_os.h>
+
+/*
+ * -----------------------------------------------------------------------------
+ * --- EXTERNAL DATA -----------------------------------------------------------
+ */
+
+extern osThreadId_t osThreadId_main;
+
+/*
+ * -----------------------------------------------------------------------------
+ * --- PUBLIC FUNCTION DEFINITIONS ---------------------------------------------
+ */
+
+void sxlib_Radio_event_handler_manager_init( const void* context, sxlib_Radio_event_handler_manager_state_t* state,
+                                             sxlib_System_basic_events_mask_t radio_event_mask )
+{
+    state->radio_event_mask = radio_event_mask;
+}
+
+/*
+ * -----------------------------------------------------------------------------
+ * --- PRIVATE FUNCTION DEFINITIONS --------------------------------------------
+ */
+
+void sxlib_Radio_event_handler_trigger_base( sxlib_Radio_event_handler_manager_state_t* state )
+{
+    osThreadFlagsSet( osThreadId_main, ( uint32_t ) state->radio_event_mask );
+}
+
+void sxlib_Radio_event_handler_trigger_with_timestamp_base( sxlib_Radio_event_handler_manager_state_t* state )
+{
+    state->timestamp = sxlib_Timing_SystemTime_get_time( );
+    osThreadFlagsSet( osThreadId_main, ( uint32_t ) state->radio_event_mask );
+}
+
+void sxlib_Radio_event_handler_cancel_event_base( sxlib_Radio_event_handler_manager_state_t* state )
+{
+    osThreadFlagsClear( ( uint32_t ) state->radio_event_mask );
+}
+
+uint32_t sxlib_Radio_event_handler_retrieve_timestamp_base( sxlib_Radio_event_handler_manager_state_t* state,
+                                                            const void*                                context )
+{
+    return state->timestamp;
+}
+
+sxlib_Radio_event_handler_status_t sxlib_Radio_event_handler_wait_for_event_base(
+    sxlib_Radio_event_handler_manager_state_t* state, sxlib_Radio_event_handler_radio_time_t timeout )
+{
+    uint32_t os_timeout;
+
+    if( timeout == SXLIB_RADIO_EVENT_HANDLER_TIMEOUT_FOREVER )
+    {
+        os_timeout = osWaitForever;
+    }
+    else
+    {
+        // If 1 tick is requested, wait at least 1 tick. This is why 1 is added.
+        os_timeout = timeout + 1;
+    }
+
+    uint32_t status = osThreadFlagsWait( ( uint32_t ) state->radio_event_mask, osFlagsWaitAll, os_timeout );
+    if( status == osFlagsErrorTimeout )
+    {
+        return SXLIB_RADIO_EVENT_HANDLER_STATUS_TIMEOUT;
+    }
+
+    return SXLIB_RADIO_EVENT_HANDLER_STATUS_OK;
+}
+
+/* --- EOF ------------------------------------------------------------------ */

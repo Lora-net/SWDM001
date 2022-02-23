@@ -1,0 +1,7 @@
+<map id="lr1110_driver/src/lr1110_regmem.h" name="lr1110_driver/src/lr1110_regmem.h">
+<area shape="rect" id="node1" title="Register/memory driver definition for LR1110." alt="" coords="205,5,381,47"/>
+<area shape="rect" id="node2" href="$lr1110__gnss_8c.html" title="GNSS scan driver implementation for LR1110." alt="" coords="5,95,181,136"/>
+<area shape="rect" id="node3" href="$lr1110__regmem_8c.html" title="Register/memory driver implementation for LR1110." alt="" coords="205,95,381,136"/>
+<area shape="rect" id="node4" href="$lr1110__wifi_8h.html" title="Wi&#45;Fi passive scan driver definition for LR1110." alt="" coords="405,95,581,136"/>
+<area shape="rect" id="node5" href="$lr1110__wifi_8c.html" title="Wi&#45;Fi passive scan driver implementation for LR1110." alt="" coords="405,184,581,225"/>
+</map>

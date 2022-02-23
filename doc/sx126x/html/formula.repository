@@ -1,0 +1,4 @@
+\_form#0=260x16:$ timeout\_duration\_ms = timeout_in_rtc_step \times * \frac{1}{64} $
+\_form#1=254x16:$ timeout\_duration\_ms = timeout_in_rtc_step \times \frac{1}{64} $
+\_form#2=171x16:$ rx\_duration\_ms = rx_time \times \frac{1}{64} $
+\_form#3=199x16:$ sleep\_duration\_ms = sleep_time \times \frac{1}{64} $

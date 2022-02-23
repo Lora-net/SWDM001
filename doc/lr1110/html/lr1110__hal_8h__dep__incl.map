@@ -1,0 +1,11 @@
+<map id="lr1110_driver/src/lr1110_hal.h" name="lr1110_driver/src/lr1110_hal.h">
+<area shape="rect" id="node1" title="Hardware Abstraction Layer (HAL) interface for LR1110." alt="" coords="705,5,881,47"/>
+<area shape="rect" id="node2" href="$lr1110__bootloader_8c.html" title="Bootloader driver implementation for LR1110." alt="" coords="5,95,181,136"/>
+<area shape="rect" id="node3" href="$lr1110__crypto__engine_8c.html" title="Cryptographic engine driver implementation for LR1110." alt="" coords="205,95,381,136"/>
+<area shape="rect" id="node4" href="$lr1110__gnss_8c.html" title="GNSS scan driver implementation for LR1110." alt="" coords="405,95,581,136"/>
+<area shape="rect" id="node5" href="$lr1110__lr__fhss_8c.html" title="LR_FHSS driver implementation for LR1110." alt="" coords="605,95,781,136"/>
+<area shape="rect" id="node6" href="$lr1110__radio_8c.html" title="Radio driver implementation for LR1110." alt="" coords="805,95,981,136"/>
+<area shape="rect" id="node7" href="$lr1110__regmem_8c.html" title="Register/memory driver implementation for LR1110." alt="" coords="1005,95,1181,136"/>
+<area shape="rect" id="node8" href="$lr1110__system_8c.html" title="System driver implementation for LR1110." alt="" coords="1205,95,1381,136"/>
+<area shape="rect" id="node9" href="$lr1110__wifi_8c.html" title="Wi&#45;Fi passive scan driver implementation for LR1110." alt="" coords="1405,95,1581,136"/>
+</map>
