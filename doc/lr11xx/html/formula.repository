@@ -1,0 +1,23 @@
+\_form#0=224x16:$ timeout\_duration\_ms = timeout \times \frac{1}{32.768} $
+\_form#1=53x16:$\frac{1}{32.768 KHz}$
+\_form#2=53x16:$ \frac{1}{32.768KHz} $
+\_form#3=156x13:$2 \times rx\_period + sleep\_period$
+\_form#4=101x9:$ 31.25us \times timeout $
+\_form#5=45x9:$ timeout $
+\_form#6=75x10:$detPeak = 50$
+\_form#7=98x14:$6 + 2 * 1/8 = 6.25$
+\_form#8=200x13:$ dutycycle = 0.2 + 0.04 \times pa_duty_cycle $
+\_form#9=120x13:$ \#slices = pa_hp_sel + 1 $
+\_form#10=218x10:$ timeout\_duration\_us = timeout \times 30.52 $
+\_form#11=175x18:$ Vbat_{V} = (5 \times \frac{Vbat}{255} - 1) \times Vana $
+\_form#12=346x20:$ Temperature_{°C} = (\frac{Temp(10:0)}{2047} \times Vana - Vbe25) \times \frac{1000}{VbeSlope} + 25 $
+\_form#13=194x16:$ sleep\_time\_ms = sleep_time \times \frac{1}{32.768} $
+\_form#14=383x14:$ T_{max} = N_{channel} \times ((1 + Xtal_{precision})timeout\_per\_channel + T_{offset} ) $
+\_form#15=69x14:$ Xtal_{precision} $
+\_form#16=118x14:$ Xtal_{precision} = 1/100 $
+\_form#17=38x13:$ T_{offset} $
+\_form#18=63x13:$ signal\_type $
+\_form#19=59x10:$scan\_mode$
+\_form#20=370x10:$scan\_mode != LR11XX\_WIFI\_SCAN\_MODE\_FULL\_BEACON$
+\_form#21=376x10:$scan\_mode == LR11XX\_WIFI\_SCAN\_MODE\_FULL\_BEACON$
+\_form#22=395x14:$ T_{max} = 2 \times N_{channel} \times (1 + Xtal_{precision})timeout\_per\_channel + T_{offset} $

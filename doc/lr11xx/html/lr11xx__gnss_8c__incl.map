@@ -1,0 +1,11 @@
+<map id="lr11xx_driver/src/lr11xx_gnss.c" name="lr11xx_driver/src/lr11xx_gnss.c">
+<area shape="rect" id="node1" title="GNSS scan driver implementation for LR11XX." alt="" coords="249,5,425,47"/>
+<area shape="rect" id="node2" href="$lr11xx__gnss_8h.html" title="GNSS scan driver definition for LR11XX." alt="" coords="305,95,417,121"/>
+<area shape="rect" id="node6" href="$lr11xx__system__types_8h.html" title="System driver types for LR11XX." alt="" coords="133,169,306,196"/>
+<area shape="rect" id="node8" href="$lr11xx__regmem_8h.html" title="Register/memory driver definition for LR11XX." alt="" coords="500,95,637,121"/>
+<area shape="rect" id="node9" href="$lr11xx__hal_8h.html" title="Hardware Abstraction Layer (HAL) interface for LR11XX." alt="" coords="5,169,108,196"/>
+<area shape="rect" id="node3" href="$lr11xx__gnss__types_8h.html" title="GNSS scan driver types for LR11XX." alt="" coords="330,169,485,196"/>
+<area shape="rect" id="node7" href="$lr11xx__types_8h.html" title="Type definitions for LR11XX." alt="" coords="509,169,628,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="178,244,261,271"/>
+<area shape="rect" id="node5" title=" " alt="" coords="328,244,399,271"/>
+</map>

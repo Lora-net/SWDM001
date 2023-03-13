@@ -2,7 +2,7 @@ Overview
 --------
 
 This package contains drivers and demos for Long-Range Frequency
-Hopping Spread Spectrum (LR-FHSS) transmission on Semtech LR1110 and
+Hopping Spread Spectrum (LR-FHSS) transmission on Semtech LR11xx and
 SX126x devices.
 
 For more information, see the doc directory, and

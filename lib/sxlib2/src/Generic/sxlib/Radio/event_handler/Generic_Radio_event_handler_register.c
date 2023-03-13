@@ -122,6 +122,12 @@ sxlib_Radio_event_handler_manager_state_t* sxlib_Radio_event_handler_manager_get
         }
     }
 
+#ifndef NDEBUG
+    while( 1 )
+    {
+    };
+#endif
+
     return 0;
 }
 

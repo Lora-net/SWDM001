@@ -1,8 +1,0 @@
-<map id="lr1110_driver/src/lr1110_wifi.h" name="lr1110_driver/src/lr1110_wifi.h">
-<area shape="rect" id="node1" title="Wi&#45;Fi passive scan driver definition for LR1110." alt="" coords="70,5,246,47"/>
-<area shape="rect" id="node2" href="$lr1110__regmem_8h.html" title="Register/memory driver definition for LR1110." alt="" coords="89,95,227,121"/>
-<area shape="rect" id="node4" href="$lr1110__types_8h.html" title="Type definitions for LR1110." alt="" coords="5,169,124,196"/>
-<area shape="rect" id="node5" href="$lr1110__wifi__types_8h.html" title="Wi&#45;Fi passive scan driver types for LR1110." alt="" coords="251,95,399,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="175,169,245,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="283,169,366,196"/>
-</map>

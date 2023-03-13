@@ -1,9 +1,0 @@
-<map id="lr1110_driver/src/lr1110_radio_timings.c" name="lr1110_driver/src/lr1110_radio_timings.c">
-<area shape="rect" id="node1" title="LR1110 timing helper functions implementation." alt="" coords="89,5,265,47"/>
-<area shape="rect" id="node2" href="$lr1110__radio__timings_8h.html" title="LR1110 timing helper functions definition." alt="" coords="9,95,180,121"/>
-<area shape="rect" id="node6" href="$lr1110__radio_8h.html" title="Radio driver definition for LR1110." alt="" coords="204,95,319,121"/>
-<area shape="rect" id="node3" href="$lr1110__radio__types_8h.html" title="Radio driver types for LR1110." alt="" coords="18,169,177,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,244,88,271"/>
-<area shape="rect" id="node5" title=" " alt="" coords="113,244,183,271"/>
-<area shape="rect" id="node7" href="$lr1110__types_8h.html" title="Type definitions for LR1110." alt="" coords="202,169,321,196"/>
-</map>

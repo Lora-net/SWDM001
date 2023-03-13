@@ -118,6 +118,12 @@ const sx_comp_t* sx_comp_get_obj( const void* context )
         }
     }
 
+#ifndef NDEBUG
+    while( 1 )
+    {
+    };
+#endif
+
     return 0;
 }
 

@@ -60,8 +60,6 @@
 
 void sxlib_System_irq_line_init( const sxlib_System_irq_line_config_t* irq_line )
 {
-    uint32_t temp;
-
     LL_GPIO_InitTypeDef init = {
         .Pin  = ( 1 << irq_line->pin ),
         .Mode = LL_GPIO_MODE_INPUT,
@@ -72,7 +70,7 @@ void sxlib_System_irq_line_init( const sxlib_System_irq_line_config_t* irq_line 
 
     uint8_t pin_group         = irq_line->pin >> 2;
     uint8_t position_in_group = ( irq_line->pin & 0x03 ) << 2;
-    SYSCFG->EXTICR[pin_group] = SYSCFG->EXTICR[pin_group] & ~( 0x0FUL << position_in_group ) |
+    SYSCFG->EXTICR[pin_group] = ( SYSCFG->EXTICR[pin_group] & ~( 0x0FUL << position_in_group ) ) |
                                 ( GPIO_GET_INDEX( irq_line->port ) << position_in_group );
 
     LL_EXTI_InitTypeDef EXTI_InitStruct = { 0 };

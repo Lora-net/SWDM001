@@ -1,0 +1,7 @@
+<map id="lr11xx_wifi_result_interface_t" name="lr11xx_wifi_result_interface_t">
+<area shape="rect" id="node1" title="Wi&#45;Fi scan results interface." alt="" coords="728,71,865,112"/>
+<area shape="rect" id="node2" href="$structlr11xx__wifi__basic__mac__type__channel__result__s.html" title="Basic MAC, type, channel result structure." alt="" coords="323,5,498,47"/>
+<area shape="rect" id="node3" href="$structlr11xx__wifi__basic__complete__result__s.html" title="Basic complete result structure." alt="" coords="309,71,512,112"/>
+<area shape="rect" id="node4" href="$structlr11xx__wifi__extended__full__result__t.html" title="Extended full result structure." alt="" coords="330,136,491,177"/>
+<area shape="rect" id="node5" href="$structlr11xx__wifi__fcs__info__byte__s.html" title="Wi&#45;Fi FCS info byte." alt="" coords="5,136,156,177"/>
+</map>

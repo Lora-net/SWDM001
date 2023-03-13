@@ -206,22 +206,29 @@ void sxlib_Comm_spi_device_fast_write_then_write( const sxlib_Comm_spi_device_t*
                                                   const uint16_t data_length )
 {
     // Always keep the FIFO full
+    const uint8_t* d_ptr;
 
-    const uint8_t* d_ptr = command;
-    while( d_ptr < &command[command_length] )
+    if( command )
     {
-        if( LL_SPI_IsActiveFlag_TXE( dev->cont->config->controller_device ) )
+        d_ptr = command;
+        while( d_ptr < command + command_length )
         {
-            LL_SPI_TransmitData8( dev->cont->config->controller_device, *d_ptr++ );
+            if( LL_SPI_IsActiveFlag_TXE( dev->cont->config->controller_device ) )
+            {
+                LL_SPI_TransmitData8( dev->cont->config->controller_device, *d_ptr++ );
+            }
         }
     }
 
-    d_ptr = data;
-    while( d_ptr < &data[data_length] )
+    if( data )
     {
-        if( LL_SPI_IsActiveFlag_TXE( dev->cont->config->controller_device ) )
+        d_ptr = data;
+        while( d_ptr < data + data_length )
         {
-            LL_SPI_TransmitData8( dev->cont->config->controller_device, *d_ptr++ );
+            if( LL_SPI_IsActiveFlag_TXE( dev->cont->config->controller_device ) )
+            {
+                LL_SPI_TransmitData8( dev->cont->config->controller_device, *d_ptr++ );
+            }
         }
     }
     sxlib_Comm_spi_device_wait_until_done( dev );
@@ -248,7 +255,8 @@ void sxlib_Comm_spi_device_fast_write_then_read( const sxlib_Comm_spi_device_t* 
         if( LL_SPI_IsActiveFlag_RXNE( dev->cont->config->controller_device ) )
         {
             uint8_t d = LL_SPI_ReceiveData8( dev->cont->config->controller_device );
-            if( rx_i >= command_length ) data[rx_i - command_length] = d;
+            if( rx_i >= command_length )
+                data[rx_i - command_length] = d;
             rx_i++;
         }
     }

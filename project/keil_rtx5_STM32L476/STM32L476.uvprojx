@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>lr1110</TargetName>
+      <TargetName>lr1110_lr1120_tcxo</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
@@ -48,14 +48,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\Objects\lr1110\</OutputDirectory>
-          <OutputName>STM32L476_lr1110</OutputName>
+          <OutputDirectory>.\Objects\lr11xx\</OutputDirectory>
+          <OutputName>STM32L476_lr11xx</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\Listings\lr1110\</ListingPath>
+          <ListingPath>.\Listings\lr11xx\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>STM32L476xx, SXTOOLS_McuFamily_STM32L4xx, SXLIB_LOG_LEVEL=2000, USE_FULL_LL_DRIVER, CONFIG_SYS_CLOCK_TICKS_PER_SEC=1000, CONFIG_SMTC_DEMO_TCXO_STARTUP_TIME=5</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\lib\stm32cubel4subset\Drivers\STM32L4xx_HAL_Driver\Inc;..\..\lib\sxlib2\include\Rtos\bare_metal\model\synchronous;..\..\lib\sxlib2\include\model\synchronous;..\..\lib\sx_comp\src;..\..\lib\sx126x_comp\src;..\..\lib\sx128x_comp\src;..\..\lib\lr1110_comp\src;..\..\lib\sx126x_driver\src;..\..\lib\sx128x_driver\src;..\..\lib\lr1110_driver\src;..\..\lib\sxlib2\include\Generic;..\..\lib\sxlib2\include\Rtos\bare_metal;..\..\lib\sxlib2\include\McuHal\stm32cube;..\..\platform\bare_metal\system\inc;..\..\lib\smtc_ral\src;..\..\lib\smtc_ralf\src;..\..\lib\utils;..\..\platform\inc;..\..\platform\bare_metal\stm32cube\shield;..\..\platform\bare_metal\stm32cube\nucleo64\STM32L4xx;..\..\lib\sxlib2\include\Generic\Extern\DmTft;..\..\lib\sx126x_lr_fhss_driver\src;..\..\lib\lr_fhss_driver\src;..\..\src</IncludePath>
+              <IncludePath>..\..\lib\stm32cubel4subset\Drivers\STM32L4xx_HAL_Driver\Inc;..\..\lib\sxlib2\include\Rtos\bare_metal\model\synchronous;..\..\lib\sxlib2\include\model\synchronous;..\..\lib\sx_comp\src;..\..\lib\sx126x_comp\src;..\..\lib\sx128x_comp\src;..\..\lib\lr11xx_comp\src;..\..\lib\sx126x_driver\src;..\..\lib\sx128x_driver\src;..\..\lib\lr11xx_driver\src;..\..\lib\sxlib2\include\Generic;..\..\lib\sxlib2\include\Rtos\bare_metal;..\..\lib\sxlib2\include\McuHal\stm32cube;..\..\platform\bare_metal\system\inc;..\..\lib\smtc_ral\src;..\..\lib\smtc_ralf\src;..\..\lib\utils;..\..\platform\inc;..\..\platform\bare_metal\stm32cube\shield;..\..\platform\bare_metal\stm32cube\nucleo64\STM32L4xx;..\..\lib\sxlib2\include\Generic\Extern\DmTft;..\..\lib\sx126x_lr_fhss_driver\src;..\..\lib\lr_fhss_driver\src;..\..\src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -401,7 +401,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>shield_e406v03a</GroupName>
+          <GroupName>shield_sx126x</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -473,9 +473,14 @@
           </GroupOption>
           <Files>
             <File>
+              <FileName>identify_sx126x.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\sx126x\identify_sx126x.c</FilePath>
+            </File>
+            <File>
               <FileName>smtc_shield.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\bare_metal\stm32cube\shield\e406v03a\smtc_shield.c</FilePath>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\sx126x\smtc_shield.c</FilePath>
             </File>
             <File>
               <FileName>BoardVariant_interrupts.c</FileName>
@@ -485,12 +490,101 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>shield_e516v02a</GroupName>
+          <GroupName>shield_lr1110_lr1120_tcxo</GroupName>
+          <Files>
+            <File>
+              <FileName>identify_lr1110_lr1120_tcxo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\lr1110_lr1120_tcxo\identify_lr1110_lr1120_tcxo.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>shield_lr1121_xtal</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>identify_lr1121_xtal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\lr1121_xtal\identify_lr1121_xtal.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>shield_lr11xx</GroupName>
           <Files>
             <File>
               <FileName>smtc_shield.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\bare_metal\stm32cube\shield\e516v02a\smtc_shield.c</FilePath>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\lr11xx\smtc_shield.c</FilePath>
             </File>
             <File>
               <FileName>BoardVariant_interrupts.c</FileName>
@@ -591,30 +685,20 @@
               <FileType>1</FileType>
               <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Sx126x\Generic_Radio_Sx126x_driver_hal_timed.c</FilePath>
             </File>
-            <File>
-              <FileName>identify_sx126x.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\bare_metal\stm32cube\shield\e406v03a\identify_sx126x.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>misc_lr1110</GroupName>
+          <GroupName>misc_lr11xx</GroupName>
           <Files>
             <File>
-              <FileName>Generic_Radio_Lr1110_driver_hal.c</FileName>
+              <FileName>Generic_Radio_Lr11xx_driver_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Lr1110\Generic_Radio_Lr1110_driver_hal.c</FilePath>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Lr11xx\Generic_Radio_Lr11xx_driver_hal.c</FilePath>
             </File>
             <File>
-              <FileName>Generic_Radio_Lr1110_driver_hal_timed.c</FileName>
+              <FileName>Generic_Radio_Lr11xx_driver_hal_timed.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Lr1110\Generic_Radio_Lr1110_driver_hal_timed.c</FilePath>
-            </File>
-            <File>
-              <FileName>identify_lr1110.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\bare_metal\stm32cube\shield\e516v02a\identify_lr1110.c</FilePath>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Lr11xx\Generic_Radio_Lr11xx_driver_hal_timed.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -703,12 +787,12 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>radio_driver_bsp_lr1110</GroupName>
+          <GroupName>radio_driver_bsp_lr11xx</GroupName>
           <Files>
             <File>
-              <FileName>lr1110_comp_hal.c</FileName>
+              <FileName>lr11xx_comp_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\src\lr1110_comp_hal.c</FilePath>
+              <FilePath>..\..\platform\src\lr11xx_comp_hal.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -812,22 +896,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>sx_comp_lr1110</GroupName>
+          <GroupName>sx_comp_lr11xx</GroupName>
           <Files>
             <File>
-              <FileName>lr1110_comp.c</FileName>
+              <FileName>lr11xx_comp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_comp\src\lr1110_comp.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_comp\src\lr11xx_comp.c</FilePath>
             </File>
             <File>
-              <FileName>lr1110_comp_samples.c</FileName>
+              <FileName>lr11xx_comp_generic.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_comp\src\lr1110_comp_samples.c</FilePath>
-            </File>
-            <File>
-              <FileName>lr1110_comp_generic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_comp\src\lr1110_comp_generic.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_comp\src\lr11xx_comp_generic.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -995,32 +1074,32 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>lr1110_driver</GroupName>
+          <GroupName>lr11xx_driver</GroupName>
           <Files>
             <File>
-              <FileName>lr1110_radio.c</FileName>
+              <FileName>lr11xx_radio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_driver\src\lr1110_radio.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_radio.c</FilePath>
             </File>
             <File>
-              <FileName>lr1110_regmem.c</FileName>
+              <FileName>lr11xx_regmem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_driver\src\lr1110_regmem.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_regmem.c</FilePath>
             </File>
             <File>
-              <FileName>lr1110_system.c</FileName>
+              <FileName>lr11xx_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_driver\src\lr1110_system.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_system.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>lr1110_lr_fhss_support</GroupName>
+          <GroupName>lr11xx_lr_fhss_support</GroupName>
           <Files>
             <File>
-              <FileName>lr1110_lr_fhss.c</FileName>
+              <FileName>lr11xx_lr_fhss.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_driver\src\lr1110_lr_fhss.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_lr_fhss.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1269,22 +1348,22 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>demo_lr1110_lr_fhss_ping</GroupName>
+          <GroupName>demo_lr11xx_lr_fhss_ping</GroupName>
           <Files>
             <File>
-              <FileName>lr1110_lr_fhss_ping_start.c</FileName>
+              <FileName>lr11xx_lr_fhss_ping_start.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\demos\lr1110_lr_fhss_ping\lr1110_lr_fhss_ping_start.c</FilePath>
+              <FilePath>..\..\src\demos\lr11xx_lr_fhss_ping\lr11xx_lr_fhss_ping_start.c</FilePath>
             </File>
             <File>
-              <FileName>lr1110_lr_fhss_ping_sync.c</FileName>
+              <FileName>lr11xx_lr_fhss_ping_sync.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\demos\lr1110_lr_fhss_ping\lr1110_lr_fhss_ping_sync.c</FilePath>
+              <FilePath>..\..\src\demos\lr11xx_lr_fhss_ping\lr11xx_lr_fhss_ping_sync.c</FilePath>
             </File>
             <File>
-              <FileName>lr1110_lr_fhss_ping.c</FileName>
+              <FileName>lr11xx_lr_fhss_ping.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\demos\lr1110_lr_fhss_ping\lr1110_lr_fhss_ping.c</FilePath>
+              <FilePath>..\..\src\demos\lr11xx_lr_fhss_ping\lr11xx_lr_fhss_ping.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1629,7 +1708,7 @@
               <MiscControls></MiscControls>
               <Define>STM32L476xx, SXTOOLS_McuFamily_STM32L4xx, SXLIB_LOG_LEVEL=2000, USE_FULL_LL_DRIVER, CONFIG_SYS_CLOCK_TICKS_PER_SEC=1000, CONFIG_SMTC_DEMO_TCXO_STARTUP_TIME=5</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\lib\stm32cubel4subset\Drivers\STM32L4xx_HAL_Driver\Inc;..\..\lib\sxlib2\include\Rtos\bare_metal\model\synchronous;..\..\lib\sxlib2\include\model\synchronous;..\..\lib\sx_comp\src;..\..\lib\sx126x_comp\src;..\..\lib\sx128x_comp\src;..\..\lib\lr1110_comp\src;..\..\lib\sx126x_driver\src;..\..\lib\sx128x_driver\src;..\..\lib\lr1110_driver\src;..\..\lib\sxlib2\include\Generic;..\..\lib\sxlib2\include\Rtos\bare_metal;..\..\lib\sxlib2\include\McuHal\stm32cube;..\..\platform\bare_metal\system\inc;..\..\lib\smtc_ral\src;..\..\lib\smtc_ralf\src;..\..\lib\utils;..\..\platform\inc;..\..\platform\bare_metal\stm32cube\shield;..\..\platform\bare_metal\stm32cube\nucleo64\STM32L4xx;..\..\lib\sxlib2\include\Generic\Extern\DmTft;..\..\lib\sx126x_lr_fhss_driver\src;..\..\lib\lr_fhss_driver\src;..\..\src</IncludePath>
+              <IncludePath>..\..\lib\stm32cubel4subset\Drivers\STM32L4xx_HAL_Driver\Inc;..\..\lib\sxlib2\include\Rtos\bare_metal\model\synchronous;..\..\lib\sxlib2\include\model\synchronous;..\..\lib\sx_comp\src;..\..\lib\sx126x_comp\src;..\..\lib\sx128x_comp\src;..\..\lib\lr11xx_comp\src;..\..\lib\sx126x_driver\src;..\..\lib\sx128x_driver\src;..\..\lib\lr11xx_driver\src;..\..\lib\sxlib2\include\Generic;..\..\lib\sxlib2\include\Rtos\bare_metal;..\..\lib\sxlib2\include\McuHal\stm32cube;..\..\platform\bare_metal\system\inc;..\..\lib\smtc_ral\src;..\..\lib\smtc_ralf\src;..\..\lib\utils;..\..\platform\inc;..\..\platform\bare_metal\stm32cube\shield;..\..\platform\bare_metal\stm32cube\nucleo64\STM32L4xx;..\..\lib\sxlib2\include\Generic\Extern\DmTft;..\..\lib\sx126x_lr_fhss_driver\src;..\..\lib\lr_fhss_driver\src;..\..\src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1691,12 +1770,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>shield_e406v03a</GroupName>
+          <GroupName>shield_sx126x</GroupName>
           <Files>
+            <File>
+              <FileName>identify_sx126x.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\sx126x\identify_sx126x.c</FilePath>
+            </File>
             <File>
               <FileName>smtc_shield.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\bare_metal\stm32cube\shield\e406v03a\smtc_shield.c</FilePath>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\sx126x\smtc_shield.c</FilePath>
             </File>
             <File>
               <FileName>BoardVariant_interrupts.c</FileName>
@@ -1706,7 +1790,165 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>shield_e516v02a</GroupName>
+          <GroupName>shield_lr1110_lr1120_tcxo</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>identify_lr1110_lr1120_tcxo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\lr1110_lr1120_tcxo\identify_lr1110_lr1120_tcxo.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>shield_lr1121_xtal</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>identify_lr1121_xtal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\lr1121_xtal\identify_lr1121_xtal.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>shield_lr11xx</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -1780,7 +2022,7 @@
             <File>
               <FileName>smtc_shield.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\bare_metal\stm32cube\shield\e516v02a\smtc_shield.c</FilePath>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\lr11xx\smtc_shield.c</FilePath>
             </File>
             <File>
               <FileName>BoardVariant_interrupts.c</FileName>
@@ -1812,15 +2054,10 @@
               <FileType>1</FileType>
               <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Sx126x\Generic_Radio_Sx126x_driver_hal_timed.c</FilePath>
             </File>
-            <File>
-              <FileName>identify_sx126x.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\bare_metal\stm32cube\shield\e406v03a\identify_sx126x.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>misc_lr1110</GroupName>
+          <GroupName>misc_lr11xx</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -1892,19 +2129,14 @@
           </GroupOption>
           <Files>
             <File>
-              <FileName>Generic_Radio_Lr1110_driver_hal.c</FileName>
+              <FileName>Generic_Radio_Lr11xx_driver_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Lr1110\Generic_Radio_Lr1110_driver_hal.c</FilePath>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Lr11xx\Generic_Radio_Lr11xx_driver_hal.c</FilePath>
             </File>
             <File>
-              <FileName>Generic_Radio_Lr1110_driver_hal_timed.c</FileName>
+              <FileName>Generic_Radio_Lr11xx_driver_hal_timed.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Lr1110\Generic_Radio_Lr1110_driver_hal_timed.c</FilePath>
-            </File>
-            <File>
-              <FileName>identify_lr1110.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\platform\bare_metal\stm32cube\shield\e516v02a\identify_lr1110.c</FilePath>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Lr11xx\Generic_Radio_Lr11xx_driver_hal_timed.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1924,7 +2156,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>radio_driver_bsp_lr1110</GroupName>
+          <GroupName>radio_driver_bsp_lr11xx</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -1996,9 +2228,9 @@
           </GroupOption>
           <Files>
             <File>
-              <FileName>lr1110_comp_hal.c</FileName>
+              <FileName>lr11xx_comp_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\platform\src\lr1110_comp_hal.c</FilePath>
+              <FilePath>..\..\platform\src\lr11xx_comp_hal.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2033,7 +2265,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>sx_comp_lr1110</GroupName>
+          <GroupName>sx_comp_lr11xx</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -2105,19 +2337,14 @@
           </GroupOption>
           <Files>
             <File>
-              <FileName>lr1110_comp.c</FileName>
+              <FileName>lr11xx_comp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_comp\src\lr1110_comp.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_comp\src\lr11xx_comp.c</FilePath>
             </File>
             <File>
-              <FileName>lr1110_comp_samples.c</FileName>
+              <FileName>lr11xx_comp_generic.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_comp\src\lr1110_comp_samples.c</FilePath>
-            </File>
-            <File>
-              <FileName>lr1110_comp_generic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_comp\src\lr1110_comp_generic.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_comp\src\lr11xx_comp_generic.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2147,7 +2374,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>lr1110_driver</GroupName>
+          <GroupName>lr11xx_driver</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -2219,24 +2446,24 @@
           </GroupOption>
           <Files>
             <File>
-              <FileName>lr1110_radio.c</FileName>
+              <FileName>lr11xx_radio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_driver\src\lr1110_radio.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_radio.c</FilePath>
             </File>
             <File>
-              <FileName>lr1110_regmem.c</FileName>
+              <FileName>lr11xx_regmem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_driver\src\lr1110_regmem.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_regmem.c</FilePath>
             </File>
             <File>
-              <FileName>lr1110_system.c</FileName>
+              <FileName>lr11xx_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_driver\src\lr1110_system.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_system.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>lr1110_lr_fhss_support</GroupName>
+          <GroupName>lr11xx_lr_fhss_support</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -2308,9 +2535,9 @@
           </GroupOption>
           <Files>
             <File>
-              <FileName>lr1110_lr_fhss.c</FileName>
+              <FileName>lr11xx_lr_fhss.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\lr1110_driver\src\lr1110_lr_fhss.c</FilePath>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_lr_fhss.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2490,7 +2717,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>demo_lr1110_lr_fhss_ping</GroupName>
+          <GroupName>demo_lr11xx_lr_fhss_ping</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -2562,19 +2789,19 @@
           </GroupOption>
           <Files>
             <File>
-              <FileName>lr1110_lr_fhss_ping_start.c</FileName>
+              <FileName>lr11xx_lr_fhss_ping_start.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\demos\lr1110_lr_fhss_ping\lr1110_lr_fhss_ping_start.c</FilePath>
+              <FilePath>..\..\src\demos\lr11xx_lr_fhss_ping\lr11xx_lr_fhss_ping_start.c</FilePath>
             </File>
             <File>
-              <FileName>lr1110_lr_fhss_ping_sync.c</FileName>
+              <FileName>lr11xx_lr_fhss_ping_sync.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\demos\lr1110_lr_fhss_ping\lr1110_lr_fhss_ping_sync.c</FilePath>
+              <FilePath>..\..\src\demos\lr11xx_lr_fhss_ping\lr11xx_lr_fhss_ping_sync.c</FilePath>
             </File>
             <File>
-              <FileName>lr1110_lr_fhss_ping.c</FileName>
+              <FileName>lr11xx_lr_fhss_ping.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\demos\lr1110_lr_fhss_ping\lr1110_lr_fhss_ping.c</FilePath>
+              <FilePath>..\..\src\demos\lr11xx_lr_fhss_ping\lr11xx_lr_fhss_ping.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2724,6 +2951,1375 @@
         </Group>
       </Groups>
     </Target>
+    <Target>
+      <TargetName>lr1121_xtal</TargetName>
+      <ToolsetNumber>0x4</ToolsetNumber>
+      <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
+      <uAC6>1</uAC6>
+      <TargetOption>
+        <TargetCommonOption>
+          <Device>STM32L476RGTx</Device>
+          <Vendor>STMicroelectronics</Vendor>
+          <PackID>Keil.STM32L4xx_DFP.2.6.1</PackID>
+          <PackURL>http://www.keil.com/pack/</PackURL>
+          <Cpu>IRAM(0x20000000,0x00018000) IRAM2(0x10000000,0x00008000) IROM(0x08000000,0x00100000) CPUTYPE("Cortex-M4") FPU2 DSP CLOCK(12000000) ELITTLE</Cpu>
+          <FlashUtilSpec></FlashUtilSpec>
+          <StartupFile></StartupFile>
+          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32L4xx_1024 -FS08000000 -FL0100000 -FP0($$Device:STM32L476RGTx$CMSIS\Flash\STM32L4xx_1024.FLM))</FlashDriverDll>
+          <DeviceId>0</DeviceId>
+          <RegisterFile>$$Device:STM32L476RGTx$Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h</RegisterFile>
+          <MemoryEnv></MemoryEnv>
+          <Cmp></Cmp>
+          <Asm></Asm>
+          <Linker></Linker>
+          <OHString></OHString>
+          <InfinionOptionDll></InfinionOptionDll>
+          <SLE66CMisc></SLE66CMisc>
+          <SLE66AMisc></SLE66AMisc>
+          <SLE66LinkerMisc></SLE66LinkerMisc>
+          <SFDFile>$$Device:STM32L476RGTx$CMSIS\SVD\STM32L4x6.svd</SFDFile>
+          <bCustSvd>0</bCustSvd>
+          <UseEnv>0</UseEnv>
+          <BinPath></BinPath>
+          <IncludePath></IncludePath>
+          <LibPath></LibPath>
+          <RegisterFilePath></RegisterFilePath>
+          <DBRegisterFilePath></DBRegisterFilePath>
+          <TargetStatus>
+            <Error>0</Error>
+            <ExitCodeStop>0</ExitCodeStop>
+            <ButtonStop>0</ButtonStop>
+            <NotGenerated>0</NotGenerated>
+            <InvalidFlash>1</InvalidFlash>
+          </TargetStatus>
+          <OutputDirectory>.\Objects\lr11xx\</OutputDirectory>
+          <OutputName>STM32L476_lr11xx</OutputName>
+          <CreateExecutable>1</CreateExecutable>
+          <CreateLib>0</CreateLib>
+          <CreateHexFile>0</CreateHexFile>
+          <DebugInformation>1</DebugInformation>
+          <BrowseInformation>1</BrowseInformation>
+          <ListingPath>.\Listings\lr11xx\</ListingPath>
+          <HexFormatSelection>1</HexFormatSelection>
+          <Merge32K>0</Merge32K>
+          <CreateBatchFile>0</CreateBatchFile>
+          <BeforeCompile>
+            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg2>0</RunUserProg2>
+            <UserProg1Name></UserProg1Name>
+            <UserProg2Name></UserProg2Name>
+            <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
+            <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopU1X>0</nStopU1X>
+            <nStopU2X>0</nStopU2X>
+          </BeforeCompile>
+          <BeforeMake>
+            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg2>0</RunUserProg2>
+            <UserProg1Name></UserProg1Name>
+            <UserProg2Name></UserProg2Name>
+            <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
+            <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopB1X>0</nStopB1X>
+            <nStopB2X>0</nStopB2X>
+          </BeforeMake>
+          <AfterMake>
+            <RunUserProg1>1</RunUserProg1>
+            <RunUserProg2>0</RunUserProg2>
+            <UserProg1Name>fromelf --bincombined --output=@L.bin !L</UserProg1Name>
+            <UserProg2Name></UserProg2Name>
+            <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
+            <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
+          </AfterMake>
+          <SelectedForBatchBuild>0</SelectedForBatchBuild>
+          <SVCSIdString></SVCSIdString>
+        </TargetCommonOption>
+        <CommonProperty>
+          <UseCPPCompiler>0</UseCPPCompiler>
+          <RVCTCodeConst>0</RVCTCodeConst>
+          <RVCTZI>0</RVCTZI>
+          <RVCTOtherData>0</RVCTOtherData>
+          <ModuleSelection>0</ModuleSelection>
+          <IncludeInBuild>1</IncludeInBuild>
+          <AlwaysBuild>0</AlwaysBuild>
+          <GenerateAssemblyFile>0</GenerateAssemblyFile>
+          <AssembleAssemblyFile>0</AssembleAssemblyFile>
+          <PublicsOnly>0</PublicsOnly>
+          <StopOnExitCode>3</StopOnExitCode>
+          <CustomArgument></CustomArgument>
+          <IncludeLibraryModules></IncludeLibraryModules>
+          <ComprImg>1</ComprImg>
+        </CommonProperty>
+        <DllOption>
+          <SimDllName>SARMCM3.DLL</SimDllName>
+          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDlgDll>DCM.DLL</SimDlgDll>
+          <SimDlgDllArguments>-pCM4</SimDlgDllArguments>
+          <TargetDllName>SARMCM3.DLL</TargetDllName>
+          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDlgDll>TCM.DLL</TargetDlgDll>
+          <TargetDlgDllArguments>-pCM4</TargetDlgDllArguments>
+        </DllOption>
+        <DebugOption>
+          <OPTHX>
+            <HexSelection>1</HexSelection>
+            <HexRangeLowAddress>0</HexRangeLowAddress>
+            <HexRangeHighAddress>0</HexRangeHighAddress>
+            <HexOffset>0</HexOffset>
+            <Oh166RecLen>16</Oh166RecLen>
+          </OPTHX>
+        </DebugOption>
+        <Utilities>
+          <Flash1>
+            <UseTargetDll>1</UseTargetDll>
+            <UseExternalTool>0</UseExternalTool>
+            <RunIndependent>0</RunIndependent>
+            <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
+            <Capability>1</Capability>
+            <DriverSelection>-1</DriverSelection>
+          </Flash1>
+          <bUseTDR>1</bUseTDR>
+          <Flash2>BIN\UL2CM3.DLL</Flash2>
+          <Flash3></Flash3>
+          <Flash4></Flash4>
+          <pFcarmOut></pFcarmOut>
+          <pFcarmGrp></pFcarmGrp>
+          <pFcArmRoot></pFcArmRoot>
+          <FcArmLst>0</FcArmLst>
+        </Utilities>
+        <TargetArmAds>
+          <ArmAdsMisc>
+            <GenerateListings>0</GenerateListings>
+            <asHll>1</asHll>
+            <asAsm>1</asAsm>
+            <asMacX>1</asMacX>
+            <asSyms>1</asSyms>
+            <asFals>1</asFals>
+            <asDbgD>1</asDbgD>
+            <asForm>1</asForm>
+            <ldLst>0</ldLst>
+            <ldmm>1</ldmm>
+            <ldXref>1</ldXref>
+            <BigEnd>0</BigEnd>
+            <AdsALst>1</AdsALst>
+            <AdsACrf>1</AdsACrf>
+            <AdsANop>0</AdsANop>
+            <AdsANot>0</AdsANot>
+            <AdsLLst>1</AdsLLst>
+            <AdsLmap>1</AdsLmap>
+            <AdsLcgr>1</AdsLcgr>
+            <AdsLsym>1</AdsLsym>
+            <AdsLszi>1</AdsLszi>
+            <AdsLtoi>1</AdsLtoi>
+            <AdsLsun>1</AdsLsun>
+            <AdsLven>1</AdsLven>
+            <AdsLsxf>1</AdsLsxf>
+            <RvctClst>0</RvctClst>
+            <GenPPlst>0</GenPPlst>
+            <AdsCpuType>"Cortex-M4"</AdsCpuType>
+            <RvctDeviceName></RvctDeviceName>
+            <mOS>1</mOS>
+            <uocRom>0</uocRom>
+            <uocRam>0</uocRam>
+            <hadIROM>1</hadIROM>
+            <hadIRAM>1</hadIRAM>
+            <hadXRAM>0</hadXRAM>
+            <uocXRam>0</uocXRam>
+            <RvdsVP>2</RvdsVP>
+            <RvdsMve>0</RvdsMve>
+            <RvdsCdeCp>0</RvdsCdeCp>
+            <hadIRAM2>1</hadIRAM2>
+            <hadIROM2>0</hadIROM2>
+            <StupSel>8</StupSel>
+            <useUlib>0</useUlib>
+            <EndSel>0</EndSel>
+            <uLtcg>0</uLtcg>
+            <nSecure>0</nSecure>
+            <RoSelD>3</RoSelD>
+            <RwSelD>4</RwSelD>
+            <CodeSel>0</CodeSel>
+            <OptFeed>0</OptFeed>
+            <NoZi1>0</NoZi1>
+            <NoZi2>0</NoZi2>
+            <NoZi3>0</NoZi3>
+            <NoZi4>0</NoZi4>
+            <NoZi5>0</NoZi5>
+            <Ro1Chk>0</Ro1Chk>
+            <Ro2Chk>0</Ro2Chk>
+            <Ro3Chk>0</Ro3Chk>
+            <Ir1Chk>1</Ir1Chk>
+            <Ir2Chk>0</Ir2Chk>
+            <Ra1Chk>0</Ra1Chk>
+            <Ra2Chk>0</Ra2Chk>
+            <Ra3Chk>0</Ra3Chk>
+            <Im1Chk>1</Im1Chk>
+            <Im2Chk>0</Im2Chk>
+            <OnChipMemories>
+              <Ocm1>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm1>
+              <Ocm2>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm2>
+              <Ocm3>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm3>
+              <Ocm4>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm4>
+              <Ocm5>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm5>
+              <Ocm6>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </Ocm6>
+              <IRAM>
+                <Type>0</Type>
+                <StartAddress>0x20000000</StartAddress>
+                <Size>0x18000</Size>
+              </IRAM>
+              <IROM>
+                <Type>1</Type>
+                <StartAddress>0x8000000</StartAddress>
+                <Size>0x100000</Size>
+              </IROM>
+              <XRAM>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </XRAM>
+              <OCR_RVCT1>
+                <Type>1</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT1>
+              <OCR_RVCT2>
+                <Type>1</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT2>
+              <OCR_RVCT3>
+                <Type>1</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT3>
+              <OCR_RVCT4>
+                <Type>1</Type>
+                <StartAddress>0x8000000</StartAddress>
+                <Size>0x100000</Size>
+              </OCR_RVCT4>
+              <OCR_RVCT5>
+                <Type>1</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT5>
+              <OCR_RVCT6>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT6>
+              <OCR_RVCT7>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT7>
+              <OCR_RVCT8>
+                <Type>0</Type>
+                <StartAddress>0x0</StartAddress>
+                <Size>0x0</Size>
+              </OCR_RVCT8>
+              <OCR_RVCT9>
+                <Type>0</Type>
+                <StartAddress>0x20000000</StartAddress>
+                <Size>0x18000</Size>
+              </OCR_RVCT9>
+              <OCR_RVCT10>
+                <Type>0</Type>
+                <StartAddress>0x10000000</StartAddress>
+                <Size>0x8000</Size>
+              </OCR_RVCT10>
+            </OnChipMemories>
+            <RvctStartVector></RvctStartVector>
+          </ArmAdsMisc>
+          <Cads>
+            <interw>1</interw>
+            <Optim>3</Optim>
+            <oTime>0</oTime>
+            <SplitLS>0</SplitLS>
+            <OneElfS>1</OneElfS>
+            <Strict>0</Strict>
+            <EnumInt>0</EnumInt>
+            <PlainCh>0</PlainCh>
+            <Ropi>0</Ropi>
+            <Rwpi>0</Rwpi>
+            <wLevel>4</wLevel>
+            <uThumb>0</uThumb>
+            <uSurpInc>0</uSurpInc>
+            <uC99>0</uC99>
+            <uGnu>0</uGnu>
+            <useXO>0</useXO>
+            <v6Lang>5</v6Lang>
+            <v6LangP>3</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define>STM32L476xx, SXTOOLS_McuFamily_STM32L4xx, SXLIB_LOG_LEVEL=2000, USE_FULL_LL_DRIVER, CONFIG_SYS_CLOCK_TICKS_PER_SEC=1000, CONFIG_SMTC_DEMO_TCXO_STARTUP_TIME=5</Define>
+              <Undefine></Undefine>
+              <IncludePath>..\..\lib\stm32cubel4subset\Drivers\STM32L4xx_HAL_Driver\Inc;..\..\lib\sxlib2\include\Rtos\bare_metal\model\synchronous;..\..\lib\sxlib2\include\model\synchronous;..\..\lib\sx_comp\src;..\..\lib\sx126x_comp\src;..\..\lib\sx128x_comp\src;..\..\lib\lr11xx_comp\src;..\..\lib\sx126x_driver\src;..\..\lib\sx128x_driver\src;..\..\lib\lr11xx_driver\src;..\..\lib\sxlib2\include\Generic;..\..\lib\sxlib2\include\Rtos\bare_metal;..\..\lib\sxlib2\include\McuHal\stm32cube;..\..\platform\bare_metal\system\inc;..\..\lib\smtc_ral\src;..\..\lib\smtc_ralf\src;..\..\lib\utils;..\..\platform\inc;..\..\platform\bare_metal\stm32cube\shield;..\..\platform\bare_metal\stm32cube\nucleo64\STM32L4xx;..\..\lib\sxlib2\include\Generic\Extern\DmTft;..\..\lib\sx126x_lr_fhss_driver\src;..\..\lib\lr_fhss_driver\src;..\..\src</IncludePath>
+            </VariousControls>
+          </Cads>
+          <Aads>
+            <interw>1</interw>
+            <Ropi>0</Ropi>
+            <Rwpi>0</Rwpi>
+            <thumb>0</thumb>
+            <SplitLS>0</SplitLS>
+            <SwStkChk>0</SwStkChk>
+            <NoWarn>0</NoWarn>
+            <uSurpInc>0</uSurpInc>
+            <useXO>0</useXO>
+            <ClangAsOpt>1</ClangAsOpt>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define></Define>
+              <Undefine></Undefine>
+              <IncludePath></IncludePath>
+            </VariousControls>
+          </Aads>
+          <LDads>
+            <umfTarg>0</umfTarg>
+            <Ropi>0</Ropi>
+            <Rwpi>0</Rwpi>
+            <noStLib>0</noStLib>
+            <RepFail>1</RepFail>
+            <useFile>0</useFile>
+            <TextAddressRange>0x08000000</TextAddressRange>
+            <DataAddressRange>0x20000000</DataAddressRange>
+            <pXoBase></pXoBase>
+            <ScatterFile></ScatterFile>
+            <IncludeLibs></IncludeLibs>
+            <IncludeLibsPath></IncludeLibsPath>
+            <Misc></Misc>
+            <LinkerInputFile></LinkerInputFile>
+            <DisabledWarnings></DisabledWarnings>
+          </LDads>
+        </TargetArmAds>
+      </TargetOption>
+      <Groups>
+        <Group>
+          <GroupName>main</GroupName>
+          <Files>
+            <File>
+              <FileName>README.md</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\README.md</FilePath>
+            </File>
+            <File>
+              <FileName>main_rtx5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\main_rtx5.c</FilePath>
+            </File>
+            <File>
+              <FileName>prepare_interface.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\prepare_interface.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>shield_sx126x</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>identify_sx126x.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\sx126x\identify_sx126x.c</FilePath>
+            </File>
+            <File>
+              <FileName>smtc_shield.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\sx126x\smtc_shield.c</FilePath>
+            </File>
+            <File>
+              <FileName>BoardVariant_interrupts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\system_files\Nucleo64\STM32L4xx\BoardVariant\e406v03a\BoardVariant_interrupts.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>shield_lr1110_lr1120_tcxo</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>identify_lr1110_lr1120_tcxo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\lr1110_lr1120_tcxo\identify_lr1110_lr1120_tcxo.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>shield_lr1121_xtal</GroupName>
+          <Files>
+            <File>
+              <FileName>identify_lr1121_xtal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\lr1121_xtal\identify_lr1121_xtal.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>shield_lr11xx</GroupName>
+          <Files>
+            <File>
+              <FileName>smtc_shield.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\shield\lr11xx\smtc_shield.c</FilePath>
+            </File>
+            <File>
+              <FileName>BoardVariant_interrupts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\system_files\Nucleo64\STM32L4xx\BoardVariant\e516v02a\BoardVariant_interrupts.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>main_</GroupName>
+          <Files>
+            <File>
+              <FileName>main_single_radio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\main_single_radio.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>misc_sx126x</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>Generic_Radio_Sx126x_driver_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Sx126x\Generic_Radio_Sx126x_driver_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>Generic_Radio_Sx126x_driver_hal_timed.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Sx126x\Generic_Radio_Sx126x_driver_hal_timed.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>misc_lr11xx</GroupName>
+          <Files>
+            <File>
+              <FileName>Generic_Radio_Lr11xx_driver_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Lr11xx\Generic_Radio_Lr11xx_driver_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>Generic_Radio_Lr11xx_driver_hal_timed.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\Lr11xx\Generic_Radio_Lr11xx_driver_hal_timed.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>radio_driver_bsp_sx126x</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>sx126x_comp_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\src\sx126x_comp_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>sx126x_comp_hal_gpio_antenna_switch.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\src\sx126x_comp_hal_gpio_antenna_switch.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>radio_driver_bsp_lr11xx</GroupName>
+          <Files>
+            <File>
+              <FileName>lr11xx_comp_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\src\lr11xx_comp_hal.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>sx_comp</GroupName>
+          <Files>
+            <File>
+              <FileName>sx_comp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sx_comp\src\sx_comp.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>sx_comp_sx126x</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>sx126x_comp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sx126x_comp\src\sx126x_comp.c</FilePath>
+            </File>
+            <File>
+              <FileName>sx126x_comp_samples.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sx126x_comp\src\sx126x_comp_samples.c</FilePath>
+            </File>
+            <File>
+              <FileName>sx126x_comp_generic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sx126x_comp\src\sx126x_comp_generic.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>sx_comp_lr11xx</GroupName>
+          <Files>
+            <File>
+              <FileName>lr11xx_comp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\lr11xx_comp\src\lr11xx_comp.c</FilePath>
+            </File>
+            <File>
+              <FileName>lr11xx_comp_generic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\lr11xx_comp\src\lr11xx_comp_generic.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>sx126x_driver</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>sx126x.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sx126x_driver\src\sx126x.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>sx126x_lr_fhss_support</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>lr_fhss_mac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sx126x_driver\src\lr_fhss_mac.c</FilePath>
+            </File>
+            <File>
+              <FileName>sx126x_lr_fhss.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sx126x_driver\src\sx126x_lr_fhss.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>lr11xx_driver</GroupName>
+          <Files>
+            <File>
+              <FileName>lr11xx_radio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_radio.c</FilePath>
+            </File>
+            <File>
+              <FileName>lr11xx_regmem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_regmem.c</FilePath>
+            </File>
+            <File>
+              <FileName>lr11xx_system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_system.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>lr11xx_lr_fhss_support</GroupName>
+          <Files>
+            <File>
+              <FileName>lr11xx_lr_fhss.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\lr11xx_driver\src\lr11xx_lr_fhss.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>sxlib</GroupName>
+          <Files>
+            <File>
+              <FileName>Generic_Timing_OneShotTimerBase.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Timing\OneShotTimerBase\Generic_Timing_OneShotTimerBase.c</FilePath>
+            </File>
+            <File>
+              <FileName>Rtos_Debug_Assert.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Rtos\bare_metal\sxlib\Debug\Assert\Rtos_Debug_Assert.c</FilePath>
+            </File>
+            <File>
+              <FileName>McuHal_Gpio_Led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\McuHal\stm32cube\sxlib\Gpio\Led\McuHal_Gpio_Led.c</FilePath>
+            </File>
+            <File>
+              <FileName>Rtos_Timing_SystemTime.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Rtos\bare_metal\sxlib\Timing\SystemTime\Rtos_Timing_SystemTime.c</FilePath>
+            </File>
+            <File>
+              <FileName>Generic_Debug_Log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Debug\Log\Generic_Debug_Log.c</FilePath>
+            </File>
+            <File>
+              <FileName>Generic_Debug_vLog.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Debug\Log\Generic_Debug_vLog.c</FilePath>
+            </File>
+            <File>
+              <FileName>McuHal_Gpio_Output.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\McuHal\stm32cube\sxlib\Gpio\Output\McuHal_Gpio_Output.c</FilePath>
+            </File>
+            <File>
+              <FileName>McuHal_Gpio_Input.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\McuHal\stm32cube\sxlib\Gpio\Input\McuHal_Gpio_Input.c</FilePath>
+            </File>
+            <File>
+              <FileName>McuHal_System_irq_line.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\McuHal\stm32cube\sxlib\System\irq_line\McuHal_System_irq_line.c</FilePath>
+            </File>
+            <File>
+              <FileName>McuHal_Comm_spi_device_fast.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\McuHal\stm32cube\sxlib\Comm\spi_device\McuHal_Comm_spi_device_fast.c</FilePath>
+            </File>
+            <File>
+              <FileName>McuHal_Comm_spi_device_optimize.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\McuHal\stm32cube\sxlib\Comm\spi_device\McuHal_Comm_spi_device_optimize.c</FilePath>
+            </File>
+            <File>
+              <FileName>McuHal_Comm_serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\McuHal\stm32cube\sxlib\Comm\serial\McuHal_Comm_serial.c</FilePath>
+            </File>
+            <File>
+              <FileName>Generic_Timing_SystemTime.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Timing\SystemTime\Generic_Timing_SystemTime.c</FilePath>
+            </File>
+            <File>
+              <FileName>Rtos_Timing_sync_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Rtos\bare_metal\sxlib\Timing\sync_timer\Rtos_Timing_sync_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>McuHal_Data_Random.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\McuHal\stm32cube\sxlib\Data\Random\McuHal_Data_Random.c</FilePath>
+            </File>
+            <File>
+              <FileName>Rtos_model_Radio_event_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Rtos\bare_metal\model\synchronous\sxlib\Radio\event_handler\Rtos_model_Radio_event_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>Generic_Radio_event_handler_register.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\sxlib2\src\Generic\sxlib\Radio\event_handler\Generic_Radio_event_handler_register.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>mcuhal_stm32cube</GroupName>
+          <Files>
+            <File>
+              <FileName>stm32l4xx_ll_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\stm32cubel4subset\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_ll_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\stm32cubel4subset\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_ll_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\stm32cubel4subset\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_ll_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\stm32cubel4subset\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_ll_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_utils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\stm32cubel4subset\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_ll_utils.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\stm32cubel4subset\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_ll_rcc.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>board_nucleo64</GroupName>
+          <Files>
+            <File>
+              <FileName>smtc_board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\nucleo64\STM32L4xx\smtc_board.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_clock_msi_48mhz_no_pll.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\stm32cube\nucleo64\STM32L4xx\stm32l4xx_clock_msi_48mhz_no_pll.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Device_bare_metal</GroupName>
+          <Files>
+            <File>
+              <FileName>Rtos_interrupts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\platform\bare_metal\system_files\STM32L4xx\Rtos\Rtx5\Rtos_interrupts.c</FilePath>
+            </File>
+            <File>
+              <FileName>Arch_HalSysTick.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\RTE\Device\STM32L476RGTx\Arch_HalSysTick.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>demo_sx126x_lr_fhss_ping</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>sx126x_lr_fhss_ping_start.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\src\demos\sx126x_lr_fhss_ping\sx126x_lr_fhss_ping_start.c</FilePath>
+            </File>
+            <File>
+              <FileName>sx126x_lr_fhss_ping_sync.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\src\demos\sx126x_lr_fhss_ping\sx126x_lr_fhss_ping_sync.c</FilePath>
+            </File>
+            <File>
+              <FileName>sx126x_lr_fhss_ping.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\src\demos\sx126x_lr_fhss_ping\sx126x_lr_fhss_ping.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>demo_lr11xx_lr_fhss_ping</GroupName>
+          <Files>
+            <File>
+              <FileName>lr11xx_lr_fhss_ping_start.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\src\demos\lr11xx_lr_fhss_ping\lr11xx_lr_fhss_ping_start.c</FilePath>
+            </File>
+            <File>
+              <FileName>lr11xx_lr_fhss_ping_sync.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\src\demos\lr11xx_lr_fhss_ping\lr11xx_lr_fhss_ping_sync.c</FilePath>
+            </File>
+            <File>
+              <FileName>lr11xx_lr_fhss_ping.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\src\demos\lr11xx_lr_fhss_ping\lr11xx_lr_fhss_ping.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::Device</GroupName>
+        </Group>
+      </Groups>
+    </Target>
   </Targets>
 
   <RTE>
@@ -2731,7 +4327,8 @@
       <api Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" exclusive="1">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="lr1110"/>
+          <targetInfo name="lr1110_lr1120_tcxo"/>
+          <targetInfo name="lr1121_xtal"/>
           <targetInfo name="sx126x"/>
         </targetInfos>
       </api>
@@ -2740,21 +4337,24 @@
       <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.4.0" condition="ARMv6_7_8-M Device">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="lr1110"/>
+          <targetInfo name="lr1110_lr1120_tcxo"/>
+          <targetInfo name="lr1121_xtal"/>
           <targetInfo name="sx126x"/>
         </targetInfos>
       </component>
       <component Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library" Cvendor="ARM" Cversion="5.5.2" condition="RTOS2 RTX5">
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.7.0"/>
         <targetInfos>
-          <targetInfo name="lr1110"/>
+          <targetInfo name="lr1110_lr1120_tcxo"/>
+          <targetInfo name="lr1121_xtal"/>
           <targetInfo name="sx126x"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.3.1" condition="STM32L4 CMSIS">
         <package name="STM32L4xx_DFP" schemaVersion="1.6.0" url="https://www.keil.com/pack/" vendor="Keil" version="2.5.0"/>
         <targetInfos>
-          <targetInfo name="lr1110"/>
+          <targetInfo name="lr1110_lr1120_tcxo"/>
+          <targetInfo name="lr1121_xtal"/>
           <targetInfo name="sx126x"/>
         </targetInfos>
       </component>
@@ -2765,7 +4365,8 @@
         <component Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library" Cvendor="ARM" Cversion="5.5.3" condition="RTOS2 RTX5"/>
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.8.0"/>
         <targetInfos>
-          <targetInfo name="lr1110"/>
+          <targetInfo name="lr1110_lr1120_tcxo"/>
+          <targetInfo name="lr1121_xtal"/>
           <targetInfo name="sx126x"/>
         </targetInfos>
       </file>
@@ -2774,7 +4375,8 @@
         <component Capiversion="2.1.3" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library" Cvendor="ARM" Cversion="5.5.3" condition="RTOS2 RTX5"/>
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.8.0"/>
         <targetInfos>
-          <targetInfo name="lr1110"/>
+          <targetInfo name="lr1110_lr1120_tcxo"/>
+          <targetInfo name="lr1121_xtal"/>
           <targetInfo name="sx126x"/>
         </targetInfos>
       </file>
@@ -2783,7 +4385,8 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.3.1" condition="STM32L4 CMSIS"/>
         <package name="STM32L4xx_DFP" schemaVersion="1.7.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.6.1"/>
         <targetInfos>
-          <targetInfo name="lr1110"/>
+          <targetInfo name="lr1110_lr1120_tcxo"/>
+          <targetInfo name="lr1121_xtal"/>
           <targetInfo name="sx126x"/>
         </targetInfos>
       </file>
@@ -2792,7 +4395,8 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.3.1" condition="STM32L4 CMSIS"/>
         <package name="STM32L4xx_DFP" schemaVersion="1.7.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.6.1"/>
         <targetInfos>
-          <targetInfo name="lr1110"/>
+          <targetInfo name="lr1110_lr1120_tcxo"/>
+          <targetInfo name="lr1121_xtal"/>
           <targetInfo name="sx126x"/>
         </targetInfos>
       </file>

@@ -125,10 +125,9 @@ sx126x_hal_status_t sx126x_hal_wakeup( const void* context )
 
 sx126x_hal_status_t sx126x_hal_reset( const void* context )
 {
-    sxlib_Radio_plain_spi_radio_t* radio = ( sxlib_Radio_plain_spi_radio_t* ) context;
-
 #ifdef CONFIG_SMTC_AUTO_WAKE_RADIO
-    radio->sleeping = false;
+    sxlib_Radio_plain_spi_radio_t* radio = ( sxlib_Radio_plain_spi_radio_t* ) context;
+    radio->sleeping                      = false;
 #endif
 
     return sx126x_hal_reset_plain( context );

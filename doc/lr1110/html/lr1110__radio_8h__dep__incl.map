@@ -1,6 +1,0 @@
-<map id="lr1110_driver/src/lr1110_radio.h" name="lr1110_driver/src/lr1110_radio.h">
-<area shape="rect" id="node1" title="Radio driver definition for LR1110." alt="" coords="205,5,381,47"/>
-<area shape="rect" id="node2" href="$lr1110__lr__fhss_8c.html" title="LR_FHSS driver implementation for LR1110." alt="" coords="5,95,181,136"/>
-<area shape="rect" id="node3" href="$lr1110__radio_8c.html" title="Radio driver implementation for LR1110." alt="" coords="205,95,381,136"/>
-<area shape="rect" id="node4" href="$lr1110__radio__timings_8c.html" title="LR1110 timing helper functions implementation." alt="" coords="405,95,581,136"/>
-</map>

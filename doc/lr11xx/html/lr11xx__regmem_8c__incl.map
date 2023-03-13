@@ -1,0 +1,8 @@
+<map id="lr11xx_driver/src/lr11xx_regmem.c" name="lr11xx_driver/src/lr11xx_regmem.c">
+<area shape="rect" id="node1" title="Register/memory driver implementation for LR11XX." alt="" coords="86,5,262,47"/>
+<area shape="rect" id="node2" href="$lr11xx__regmem_8h.html" title="Register/memory driver definition for LR11XX." alt="" coords="33,95,171,121"/>
+<area shape="rect" id="node5" href="$lr11xx__hal_8h.html" title="Hardware Abstraction Layer (HAL) interface for LR11XX." alt="" coords="195,95,297,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="148,169,219,196"/>
+<area shape="rect" id="node4" href="$lr11xx__types_8h.html" title="Type definitions for LR11XX." alt="" coords="5,169,124,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="243,169,326,196"/>
+</map>

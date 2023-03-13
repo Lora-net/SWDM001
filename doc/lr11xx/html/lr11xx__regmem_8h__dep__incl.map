@@ -1,0 +1,8 @@
+<map id="lr11xx_driver/src/lr11xx_regmem.h" name="lr11xx_driver/src/lr11xx_regmem.h">
+<area shape="rect" id="node1" title="Register/memory driver definition for LR11XX." alt="" coords="305,5,481,47"/>
+<area shape="rect" id="node2" href="$lr11xx__gnss_8c.html" title="GNSS scan driver implementation for LR11XX." alt="" coords="5,95,181,136"/>
+<area shape="rect" id="node3" href="$lr11xx__radio_8c.html" title="Radio driver implementation for LR11XX." alt="" coords="205,95,381,136"/>
+<area shape="rect" id="node4" href="$lr11xx__regmem_8c.html" title="Register/memory driver implementation for LR11XX." alt="" coords="405,95,581,136"/>
+<area shape="rect" id="node5" href="$lr11xx__wifi_8h.html" title="Wi&#45;Fi passive scan driver definition for LR11XX." alt="" coords="605,95,781,136"/>
+<area shape="rect" id="node6" href="$lr11xx__wifi_8c.html" title="Wi&#45;Fi passive scan driver implementation for LR11XX." alt="" coords="605,184,781,225"/>
+</map>
